@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+    <meta charset="utf-8">
+    <title>Add scripts to the page</title>
+    </title>
+</head>
+<body>
+
+<!--Add an external script 
+    recommende to use async:
+    - async (script will be executed right after loaded)
+    - defer (will postpone execution till the page is ready)
+      but have to hande event listener
+
+or more simply to
+load script at the end of the page
+synchronoysly
+
+-->
+<div>
+ <canvas id="canvas"></canvas>
+</div>
+<!--Built in script -->
+<script>
+alert('Some text');
+</script>
+<script src="./js/main.js"></script>
+</body>
+</html>
