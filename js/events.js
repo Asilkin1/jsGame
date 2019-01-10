@@ -1,14 +1,14 @@
 // events.js file
 'use strict'
 
-// ----------------------------- BUTTONS -------------------------------- 
+// ----------------------------- BUTTONS --------------------------------
 var button = document.getElementById('add');
 var removeButton = document.getElementById('remove');
 
 // --------------------------- BUTTONS EVENTS ----------------------------
 button.addEventListener('click', function () {
     // Render template item within a placeholder
-    for (var i = 1; i < 10; i++) {
+    for (var i = 1; i < 2; i++) {
         var newTile = template.cloneNode(true);
         newTile.children[0].textContent = i;
         tiles.appendChild(newTile);
