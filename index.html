@@ -1,30 +1,70 @@
 <!DOCTYPE html>
 <html lang="eng">
+
 <head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
     <meta charset="utf-8">
     <title>Add scripts to the page</title>
     </title>
 </head>
+
 <body>
+    <div class="overlay menu hidden">
+        <form>
+            <label>Name:</label>
+            <input type="text" required>
+        </form>
+        </form>
+    </div>
+    <div class='call-menu'>
+        Call menu
+    </div>
+    <h1>Super 2048</h1>
+    <!--Put tiles here -->
+    <div class="tiles">
+    </div>
 
-<!--Add an external script 
-    recommende to use async:
-    - async (script will be executed right after loaded)
-    - defer (will postpone execution till the page is ready)
-      but have to hande event listener
+    <div id='button-group'>
+        <button id="add">
+            Add
+        </button>
 
-or more simply to
-load script at the end of the page
-synchronoysly
+        <button id="remove">
+            Remove
+        </button>
+    </div>
 
--->
-<div>
- <canvas id="canvas"></canvas>
-</div>
-<!--Built in script -->
-<script>
-alert('Some text');
-</script>
-<script src="./js/main.js"></script>
+    <!-- Template for tiles-->
+    <template id="tile-template">
+        <div class="tile">
+            <span>
+                <!-- tile number -->
+            </span>
+        </div>
+    </template>
+
+    <!-- Main js file-->
+    <script src="./js/main.js"></script>
+    <!-- Handling events -->
+    <script src="./js/events.js"></script>
+
+
+    <!-- Template for mobs
+   <template id="mob-template">
+       <div class='enemy'>
+       <div class="create-mob">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 86" class="setup-similar-mob">
+                <g class="mob">
+                  <use xlink:href="#mob-coat" class="mob-coat"></use>
+                  <use xlink:href="#mob-head" class="mob-head"></use>
+                  <use xlink:href="#mob-eyes" class="mob-eyes"></use>
+                  <use xlink:href="#mob-hands" class="mob-hands"></use>
+                </g>
+              </svg>
+       </div>
+       </div>
+    </template> -->
+    <footer></footer>
 </body>
+
 </html>
