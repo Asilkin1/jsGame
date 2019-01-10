@@ -28,6 +28,7 @@ text-align:center;
 	text-align: center;
 	display:inline-block;
 	margin:auto;
+	position: absolute;
 }
 
 span{

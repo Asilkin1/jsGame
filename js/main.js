@@ -4,7 +4,6 @@
 // -------------------------- Select tiles placeholder
 var tiles = document.querySelector('.tiles');
 
-
 // -------------------------- Select a template
 var template = document.querySelector('#tile-template')
 .content
@@ -54,7 +53,7 @@ tile.addEventListener('mousedown',function(e){
       upEvent.preventDefault();
       if(dragged)
       {
-        tiles.removeEventListener('mousemove',onMouseMove);
+        tiles.removeEventListener('mousedown',onMouseMove);
       }
       document.removeEventListener('mousedown',e);
 
