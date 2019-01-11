@@ -1,0 +1,26 @@
+.top-nav{
+   margin:auto;
+}
+
+.top-nav-list{
+    padding:20px;
+    text-align: center;
+}
+
+#top-nav-link{
+    text-transform: uppercase;
+    padding:10px;
+    text-decoration: none;
+    background-color: rgb(198, 201, 181);
+    color:white;
+    font-weight: 900;
+}
+#top-nav-link--send-invite{
+    border:salmon solid;
+    border-radius:20%;
+    color:black;
+    text-transform: uppercase;
+}
+a:visited{
+    color:white;
+}

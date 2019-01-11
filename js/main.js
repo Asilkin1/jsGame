@@ -9,7 +9,7 @@ var template = document.querySelector('#tile-template')
 .content
 .querySelector('.tile');
 
-for (var i = 1; i < 2; i++) {
+for (var i = 1; i < 9; i++) {
     var newTile = template.cloneNode(true);
     newTile.children[0].textContent = i;
     tiles.appendChild(newTile);
@@ -42,7 +42,7 @@ tile.addEventListener('mousedown',function(e){
         x: moveEvent.clientX,
         y: moveEvent.clientY
     };
-        console.log(startXY.x + startXY.y);
+        console.log(startXY.x , startXY.y);
         // Change style for element that have to be moved
         tile.style.top = (tile.offsetTop - shift.y) + 'px';
         tile.style.left = (tile.offsetLeft - shift.x) + 'px';
@@ -51,13 +51,18 @@ tile.addEventListener('mousedown',function(e){
 
     var onMouseUp = function(upEvent){
       upEvent.preventDefault();
-      if(dragged)
-      {
-        tiles.removeEventListener('mousedown',onMouseMove);
-      }
-      document.removeEventListener('mousedown',e);
+     
+      tile.removeEventListener('mousemove',onMouseMove);
+      tile.removeEventListener('mouseup',onMouseUp);
+      if(dragged){
+          var onClickPreventDefault = function(event){
+              event.preventDefault();
+              tile.removeEventListener('click', onClickPreventDefault);
+          };
+          tile.addEventListener('click', onClickPreventDefault);
+      }  
+    };
 
-    }
-  document.addEventListener('mousemove', onMouseMove);
-  document.addEventListener('mouseup',onMouseUp);
+    tile.addEventListener('mousemove', onMouseMove);
+    tile.addEventListener('mouseup',onMouseUp);
 });

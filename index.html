@@ -3,68 +3,82 @@
 
 <head>
     <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/form.css">
+    <link rel="stylesheet" type="text/css" href="./css/footer.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./css/fonts.css">
     <meta charset="utf-8">
     <title>Add scripts to the page</title>
     </title>
 </head>
+<header>
+    <nav class="top-nav">
+        <div class="top-nav-list">
+            <a href="gallery.html" id="top-nav-link" href="#">Gallery</a>
+            <a id="top-nav-link" href="#">Profile</a>
+            <a id="top-nav-link--send-invite" href="#">send invite</a>
+        </div>
+    </nav>
+
+</header>
 
 <body>
-    <div class="overlay menu hidden">
-        <form>
-            <label>Name:</label>
-            <input type="text" required>
-        </form>
-        </form>
-    </div>
-    <div class='call-menu'>
-        Call menu
-    </div>
-    <h1>Super 2048</h1>
-    <!--Put tiles here -->
-    <div class="tiles">
-    </div>
-
-    <div id='button-group'>
-        <button id="add">
-            Add
-        </button>
-
-        <button id="remove">
-            Remove
-        </button>
-    </div>
-
-    <!-- Template for tiles-->
-    <template id="tile-template">
-        <div class="tile">
-            <span>
-                <!-- tile number -->
-            </span>
+    <div class="wrapper">
+        <h1>Wildgram</h1>
+        <div class="signup">
+            <div class="main-image">
+            </div>
+            <!--Sign up form -->
+            <div id='form'>
+                <form id='sign-up-form'>
+                    <h2 id='align-center'>Sign up</h2>
+                    <label>Name:</label>
+                    <input type="text" required></input>
+                    <label>Email:</label>
+                    <input type="email" required></input>
+                    <label>Password:</label>
+                    <input type="password" required minlength="8"></input>
+                    <label>Confirm password:</label>
+                    <input type="password" required minlength="8"></input>
+                    <div id='align-center'>
+                        <input type="submit"></input>
+                        <button id='sign-in-link'>sign in?</button>
+                    </div>
+                </form>
+                 <!-- Sign in form-->
+                <form id="sign-in-form" class='hidden'>
+                    <h2 id='align-center'>Sign in</h2>
+                        <label>Email:</label>
+                        <input type="email" required></input>
+                        <label>Password:</label>
+                        <input type="password" required minlength="8"></input>
+                    
+                        <div id='align-center'>
+                            <input type="submit"></input>
+                            <button id="sign-up-link">sign up?</button>
+                        </div>
+                    </form>
+            </div>
         </div>
-    </template>
-
-    <!-- Main js file-->
-    <script src="./js/main.js"></script>
-    <!-- Handling events -->
-    <script src="./js/events.js"></script>
 
 
-    <!-- Template for mobs
-   <template id="mob-template">
-       <div class='enemy'>
-       <div class="create-mob">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 86" class="setup-similar-mob">
-                <g class="mob">
-                  <use xlink:href="#mob-coat" class="mob-coat"></use>
-                  <use xlink:href="#mob-head" class="mob-head"></use>
-                  <use xlink:href="#mob-eyes" class="mob-eyes"></use>
-                  <use xlink:href="#mob-hands" class="mob-hands"></use>
-                </g>
-              </svg>
-       </div>
-       </div>
-    </template> -->
-    <footer></footer>
+        <!-- Main js file-->
+        <script src="./js/main.js"></script>
+        <!-- Handling events -->
+        <!-- <script src="./js/events.js"></script> -->
+        <!-- Handling forms-->
+        <script src="./js/form.js"></script>
+
+        <footer class="footer">
+        
+            <div id="text-column">
+                <a class="footer-text">About</button>
+                <a class="footer-text">About</a>
+                <a class="footer-text">About</a>
+            </div>
+        </footer>
+    </div>
 </body>
+
 
 </html>

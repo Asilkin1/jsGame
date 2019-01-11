@@ -40,7 +40,7 @@ document.addEventListener('keydown', function (e) {
 });
 
 // ---------------------------- Show menu --------------------------------
-var callMenu = document.querySelector('.call-menu');
-callMenu.addEventListener('click', function () {
-    document.querySelector('.menu').classList.remove('hidden');
-});
+// var callMenu = document.querySelector('.call-menu');
+// callMenu.addEventListener('click', function () {
+//     document.querySelector('.menu').classList.remove('hidden');
+// });

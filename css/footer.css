@@ -1,0 +1,33 @@
+footer
+{
+    height:50px;
+    position: sticky;
+    
+}
+
+#text-column{
+    text-align: center;
+    position: relative;
+    margin:20px;
+    text-transform: capitalize;
+}
+
+.footer-text{
+    color:rgb(124, 124, 124); 
+    text-transform: uppercase; 
+}
+
+p{
+    text-align: justify;
+    text-indent: 4%
+}
+
+#a-footer{
+    text-transform: uppercase;
+    padding:10px;
+    text-decoration: none;
+    color:darkslategray;
+    font-weight: 900;
+    font-size:1rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
